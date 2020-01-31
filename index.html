@@ -3,30 +3,21 @@
 
 <head>
     <title>Generator tekstów Na'voka (Nieoficjalny spinoff).</title>
-    <style>
-        .sr {
-            text-align: center;
-        }
-    </style>
-    <script src="texts.js"></script>
-    <script>
-        function gen() {
-            var out = t1[Math.floor(Math.random() * t1.length)] + " " +
-                t2[Math.floor(Math.random() * t2.length)] + " " +
-                t3[Math.floor(Math.random() * t3.length)] + " " +
-                t4[Math.floor(Math.random() * t4.length)];
-            var para = document.getElementById("genOut");
-            para.innerHTML = out;
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8"> 
 </head>
 
 <body>
     <a href="about.html">O stronie.</a>
     <h1 class="sr">Nieoficjalny spinoff<br>Generatora tekstów Na'voka</h1>
-    <p class="sr"><img src="ufolud.jpeg" onclick="gen()"></p>
+    <p class="sr"><canvas id="canvas" height="200" width="300">Not supporting WebGl</canvas></p>
     <p class="sr"><button onclick="gen()">Generuj</button></p>
     <p class="sr" id="genOut"></p>
+
+    <img id="navok-texture" src="ufolud.jpeg" height="0" width="0">
+    <script src="gen.js"></script>
+    <script src="gl-matrix.js"></script>
+    <script src="wgl.js"></script>
 </body>
 
 </html>
