@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Symulacja Układu Słonecznego</title>
+    </head>
+    <body>
+        <canvas id="mainCanvas" height="500" width="500">Not supporting HTML5</canvas>
+        <p>
+            State of simulation:
+            <div id="pauseState">
+                Running
+            </div>
+            <button id="pauseButton" onclick="changeState()">Pause</button>
+            <br>
+            Scale:
+            <div id="scaleState">
+                1
+            </div>
+            <input id="inputScale">
+            <button id=scaleButton onclick="changeScale()">Change Scale</button>
+        </p>
+        <p>Generate new object. 
+            x: <input id="inputX"> 
+            y: <input id="inputY"> 
+            Vx: <input id="inputVx"> 
+            Vy: <input id="inputVy"> 
+            m: <input id="inputM"> 
+            <button id="generateButton" onclick="generateNewCBody()">Generate</button>
+        </p>
+
+        <p>
+            Simulation speed: <br>
+            <div id="calc">Calculaitons per second - 100</div> <input id="calcSec"> <button id="caclSecButton" onclick="changeCalc()">Change</button> <br>
+            <div id="dt">dt multiplier - 1 </div> <input id="dtMult"> <button id="dtMultButton" onclick="changeDtMult()">Change</button> <br>
+        </p>
+
+        Made by Filip Kopyt
+
+        <script src="cBodyClass.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
