@@ -35,8 +35,8 @@ function animate() {
             var dt = (1/calcPerSec) * dtMult;
             cBodies.forEach((element) => { element.move(dt) });
             if(cBodies.length == 1) {
-                cBodies[0].x += cBodies[0].Vx;
-                cBodies[0].y += cBodies[0].Vy;
+                cBodies[0].x += cBodies[0].Vx * dt;
+                cBodies[0].y += cBodies[0].Vy * dt;
             }
             for (var i = 0; i < cBodies.length; i++) {
                 for (var j = i + 1; j < cBodies.length; j++) {
