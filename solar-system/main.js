@@ -76,7 +76,7 @@ function changeScale() {
         for(var y = 0; y < paths.length; y++) {
             if(paths[x][y] == true)
             {
-                paths[Math.min(500, Math.max(0, Number.parseInt(x * newScale/scale)))][Math.min(500, Math.max(0, Number.parseInt(y * newScale/scale)))] = true;
+                paths[Math.min(499, Math.max(0, Number.parseInt(x * newScale/scale)))][Math.min(499, Math.max(0, Number.parseInt(y * newScale/scale)))] = true;
                 paths[x][y] = false;
             }
         }
