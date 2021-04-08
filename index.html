@@ -19,6 +19,7 @@
             <input id="inputScale">
             <button id=scaleButton onclick="changeScale()">Change Scale</button>
         </p>
+
         <p>Generate new object. 
             x: <input id="inputX"> 
             y: <input id="inputY"> 
@@ -26,6 +27,13 @@
             Vy: <input id="inputVy"> 
             m: <input id="inputM"> 
             <button id="generateButton" onclick="generateNewCBody()">Generate</button>
+        </p>
+
+        <p>
+            Instrukcja do ładnego przykładu. <br>
+            1. Stworzenie ciała (x: 250, y: 250, Vx: 0, Vy: 0, m: 1e15) <button onclick="cBodies.push(new cBody(250, 250, 0, 0, 1e15, scale, paths));">Przykład 1</button> <br>
+            2. Stworzenie ciała (x: 250, y: 100, Vx: 15, Vy: 0, m: 1e12) <button onclick="cBodies.push(new cBody(250, 100, 15, 0, 1e12, scale, paths));">Przykład 2</button> <br>
+            3. Dla niecierpliwych można pobawić się polami niżej.
         </p>
 
         <p>
