@@ -76,7 +76,7 @@ function changeScale() {
         for(var y = 0; y < paths.length; y++) {
             if(paths[x][y] == true)
             {
-                paths[Math.min(499, Math.max(0, Number.parseInt(x * newScale/scale)))][Math.min(499, Math.max(0, Number.parseInt(y * newScale/scale)))] = true;
+                paths[Math.min(499, Math.max(0, Number.parseInt(x * scale/newScale)))][Math.min(499, Math.max(0, Number.parseInt(y * scale/newScale)))] = true;
                 paths[x][y] = false;
             }
         }
@@ -107,7 +107,7 @@ function changeState() {
 
 function changeDtMult() {
     dtMult = Number.parseFloat(document.getElementById("dtMult").value);
-    document.getElementById("dt").innerHTML = "dt multiplier -" + dtMult;
+    document.getElementById("dt").innerHTML = "dt multiplier - " + dtMult;
 }
 
 function changeCalc() {
