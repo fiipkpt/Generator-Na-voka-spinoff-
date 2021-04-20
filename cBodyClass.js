@@ -30,7 +30,7 @@ class cBody {
     draw(context) {
         context.beginPath();
         context.fillStyle = "Black";
-        context.arc(this.x * this.scale, this.y * this.scale, this.radius, 0, 2 * Math.PI);
+        context.arc(this.x / this.scale, this.y / this.scale, this.radius, 0, 2 * Math.PI);
         context.fill();
     }
 
@@ -39,8 +39,8 @@ class cBody {
      * @param {Number} deltaTime
     */
     move(deltaTime) {
-        if(this.x*this.scale >= 0 && this.x*this.scale < 500 && this.y*this.scale >= 0 && this.y*this.scale < 500) {
-            this.path[Number.parseInt(this.x*this.scale)][Number.parseInt(this.y*this.scale)] = true;
+        if(this.x/this.scale >= 0 && this.x/this.scale < 500 && this.y/this.scale >= 0 && this.y/this.scale < 500) {
+            this.path[Number.parseInt(this.x/this.scale)][Number.parseInt(this.y/this.scale)] = true;
         }
 		//console.log(this.x + " " + this.y);
     }
